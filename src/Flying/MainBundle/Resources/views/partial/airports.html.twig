@@ -1,0 +1,122 @@
+<div class="resizable_wrapper">
+
+	<button class="btn btn-primary btn-lg tab_button active" id="airports_btn" style="outline: none;">{% trans %}Aeroportos{% endtrans %}
+	<span class="glyphicon glyphicon-chevron-right"></span>
+	</button>
+
+	<section class="row airports_content">
+	
+		<div class="btn-group btn-group-justified direct_flight_choice">
+		  <div class="btn-group">
+		    <button type="button" class="btn btn-default active" id="show_stop_flights">{% trans %}Voos com escala{% endtrans %}</button>
+		  </div>
+		  <div class="btn-group">
+		    <button type="button" class="btn btn-default" id="show_direct_flights">{% trans %}Voos directos{% endtrans %}</button>
+		  </div>
+		</div>
+
+
+		<div class="col-md-4 origins_col">
+			<h3 id="origins_title" class="airports_title">{% trans %}Origens{% endtrans %}</h3>
+			<div class="origins_wrapper">
+				{% for origin in all_origins %}
+				<div class="chk_lbl_wrapper clw_{{origin.code}}">
+					<input type="checkbox" id="origchk_{{origin.code}}" class="css-checkbox med"/>
+					<label for="origchk_{{origin.code}}" name="" class="css-label med elegant">
+						<script>
+						document.write(get_airport_list_text('{{origin.code}}'));
+						</script>
+					</label><br>
+				</div>
+		    	{% endfor %}
+	    	</div>
+
+	    	<button type="button" class="btn btn-default show_remaining_airports">
+				<span class="glyphicon glyphicon-plus"></span>  {% trans %}Todos{% endtrans %}
+			</button>
+
+	    	<div class="remaining_airports_wrapper remaining_origins">
+	    		{% for stop in all_stops %}
+				<div class="chk_lbl_wrapper clw_{{stop.code}}">
+					<input type="checkbox" id="origchk_{{stop.code}}" class="css-checkbox med"/>
+					<label for="origchk_{{stop.code}}" name="" class="css-label med elegant">
+						<script>
+						document.write(get_airport_list_text('{{stop.code}}'));
+						</script>
+					</label><br>
+				</div>
+		    	{% endfor %}
+			</div>
+		</div>
+
+
+		<div class="col-md-4 stops_col">
+			<h3 id="stops_title" class="airports_title">{% trans %}Escalas{% endtrans %}</h3>
+			<div class="stops_wrapper">
+				{% for stop in all_stops %}
+				<div class="chk_lbl_wrapper clw_{{stop.code}}">
+					<input type="checkbox" id="stopchk_{{stop.code}}" class="css-checkbox med" checked="checked"/>
+					<label for="stopchk_{{stop.code}}" name="" class="css-label med elegant">
+						<script>
+						document.write(get_airport_list_text('{{stop.code}}'));
+						</script>
+					</label><br>
+				</div>
+		    	{% endfor %}
+	    	</div>
+
+	    	<button type="button" class="btn btn-default show_remaining_airports">
+				<span class="glyphicon glyphicon-plus"></span>  {% trans %}Todos{% endtrans %}
+			</button>
+
+	    	<div class="remaining_airports_wrapper remaining_stops">
+	    		{% for origin in all_origins %}
+				<div class="chk_lbl_wrapper clw_{{origin.code}}">
+					<input type="checkbox" id="stopchk_{{origin.code}}" class="css-checkbox med"/>
+					<label for="stopchk_{{origin.code}}" name="" class="css-label med elegant">
+						<script>
+						document.write(get_airport_list_text('{{origin.code}}'));
+						</script>
+					</label><br>
+				</div>
+		    	{% endfor %}
+	
+			</div>
+		</div>
+
+
+		<div class="col-md-4 destinations_col">
+			<h3 id="destinations_title" class="airports_title">{% trans %}Destinos{% endtrans %}</h3>
+			<div class="destinations_wrapper">
+				{% for destination in all_origins %}
+				<div class="chk_lbl_wrapper clw_{{destination.code}}">
+					<input type="checkbox" id="destchk_{{destination.code}}" class="css-checkbox med" checked="checked"/>
+					<label for="destchk_{{destination.code}}" name="" class="css-label med elegant">
+						<script>
+						document.write(get_airport_list_text('{{destination.code}}'));
+						</script>
+					</label><br>
+				</div>
+		    	{% endfor %}
+	    	</div>
+
+	    	<button type="button" class="btn btn-default show_remaining_airports">
+				<span class="glyphicon glyphicon-plus"></span>  {% trans %}Todos{% endtrans %}
+			</button>
+
+	    	<div class="remaining_airports_wrapper remaining_destinations">
+	    		{% for stop in all_stops %}
+				<div class="chk_lbl_wrapper clw_{{stop.code}}">
+					<input type="checkbox" id="destchk_{{stop.code}}" class="css-checkbox med"/>
+					<label for="destchk_{{stop.code}}" name="" class="css-label med elegant">
+						<script>
+						document.write(get_airport_list_text('{{stop.code}}'));
+						</script>
+					</label><br>
+				</div>
+		    	{% endfor %}
+			</div>
+		</div>
+	</section>
+
+</div>

@@ -1,0 +1,52 @@
+{{ include("FlyingMainBundle:partial:head.html.twig") }}
+
+{% for airport in all_airports %}
+	<script>
+		create_airport("{{airport.code}}","{{airport.text}}");
+	</script>
+{% endfor %}
+
+
+<div class="container">
+	{{ include("FlyingMainBundle:partial:top_language.html.twig") }}
+
+	<form id="initial_form" action="">
+		
+		{{ include("FlyingMainBundle:partial:date_choice.html.twig") }}
+
+
+		<button type="submit" class="btn btn-danger btn-lg tab_button" id="search_btn" style="outline: none;">{% trans %}Procurar{% endtrans %}
+		<span class="glyphicon glyphicon-search"></span>
+		</button>
+		
+
+	</form>
+
+	{{ include("FlyingMainBundle:partial:airports.html.twig") }}
+	
+	{{ include("FlyingMainBundle:partial:add_trip.html.twig") }}
+	
+	{{ include("FlyingMainBundle:partial:remove_airports.html.twig") }}
+	
+
+</div>
+
+{{ include("FlyingMainBundle:partial:footer.html.twig") }}
+
+<script>
+{% for route in all_routes %}
+		create_new_route("{{route.origin}}","{{route.destination}}");
+{% endfor %}
+</script>
+
+<script type="text/javascript">
+	
+$(function () {
+
+		check_origin_stop_routes();
+		check_stop_destination_routes();
+		check_origin_destination_routes();
+
+})
+
+</script>

@@ -1,0 +1,30 @@
+parameters:
+    database_driver: pdo_mysql
+    database_host: localhost
+    database_port: '3306'
+    database_name: ####
+    database_user: ####
+    database_password: ####
+    mailer_transport: gmail
+    mailer_host: ~
+    mailer_user: #####
+    mailer_password: ######
+    locale: en
+    secret: 8c222f27c8095bb8660f0b7eaebc5b451eb79b52
+    database_path: 127.0.0.1
+    node_bin: 'C:\nodejs\node.exe'
+    node_modules:
+        - 'C:\nodejs\node_modules'
+    days_to_check: 130 # 130 dias que e' a volta de 4 meses
+    max_flight_price: 80 # preco maximo por um voo
+    max_trip_price: 200 # preco maximo por uma viagem (uma ida ou uma volta)
+    min_wait_time: 90 # tempo de espera minimo na escala (em minutos) - Intervalos de 30 minutos!
+    max_wait_time: 720 # tempo de espera maximo na escala (em minutos) - Intervalos de 30 minutos!
+    result_limit: 50 # numero maximo de resultados na procura
+    min_return_days: 3 # mostra o voo de regresso apos este dias a contar da viagem de ida
+    max_return_days: 10 # mostra o voo de regresso ate depois destes dias a contar da viagem de ida
+    max_tolerate_wait: 5 # numero de horas de espera maximo, para marcar os voos com espera menor (apenas para efeitos visuais)
+    begining_date: '2000-01-01' #data com que os voos sao criados
+    request_interval: 1 #numero de minutos entre cada request (1 request - 7 voos) - cron jobs
+    ignore_first_days: 5 #ignorar os voos nos proximos XX dias
+    min_update_days: 2 #so faz request a ryanair se o voo estiver desactualizado estes os mais dias

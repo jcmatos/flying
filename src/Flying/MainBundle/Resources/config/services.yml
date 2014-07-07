@@ -1,0 +1,7 @@
+parameters:
+#    flying_main.example.class: Flying\MainBundle\Example
+
+services:
+#    flying_main.example:
+#        class: %flying_main.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

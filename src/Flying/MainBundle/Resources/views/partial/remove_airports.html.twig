@@ -1,0 +1,46 @@
+<div class="resizable_wrapper">
+
+	<button class="btn btn-primary btn-lg tab_button active" id="airports_btn" style="outline: none;">{% trans %}Remover{% endtrans %}
+	<span class="glyphicon glyphicon-chevron-right"></span>
+	</button>
+
+	<section class="row remove_airports_content">
+
+		<div class="col-md-6">
+			<h3 id="origins_title">{% trans %}Origens{% endtrans %}/{% trans %}Destinos{% endtrans %}</h3>
+			<div class="remove_origins_wrapper">
+				{% for origin in all_origins %}
+				<div class="chk_lbl_wrapper clw_{{origin.code}}">
+					<input type="checkbox" id="delechk_{{origin.code}}" class="css-checkbox med"/>
+					<label for="delechk_{{origin.code}}" name="" class="css-label med elegant error">
+						<script>
+						document.write(get_airport_list_text('{{origin.code}}'));
+						</script>
+					</label><br>
+				</div>
+		    	{% endfor %}
+	    	</div>
+		</div>
+		<div class="col-md-6">
+			<h3 id="stops_title">{% trans %}Escalas{% endtrans %}</h3>
+			<div class="remove_stops_wrapper">
+				{% for stop in all_stops %}
+				<div class="chk_lbl_wrapper clw_{{stop.code}}">
+					<input type="checkbox" id="delechk_{{stop.code}}" class="css-checkbox med"/>
+					<label for="delechk_{{stop.code}}" name="" class="css-label med elegant error">
+						<script>
+						document.write(get_airport_list_text('{{stop.code}}'));
+						</script>
+					</label><br>
+				</div>
+		    	{% endfor %}
+	    	</div>
+		</div>
+		
+		<button class="btn btn-danger btn-lg tab_button" id="remove_airports_btn" style="outline: none;">{% trans %}Remover{% endtrans %}
+		<span class="glyphicon glyphicon-remove"></span>
+		</button>
+
+	</section>
+
+</div>

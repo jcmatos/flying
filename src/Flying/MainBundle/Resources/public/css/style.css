@@ -1,0 +1,433 @@
+
+@lightGrey: #eeeeee;
+@darkGrey: #aaaaaa;
+@red: #d9534f;
+
+html {
+	padding-bottom: 50px;
+	padding-top: 60px;
+	min-width: 320px;
+}
+
+.container {
+	padding-left: 0;
+	padding-right: 0;
+	.row {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.top_fixed_menu {
+	position: fixed;
+	left: 0;
+	width: 100%;
+	background: #000;
+	border-bottom: 1px solid @darkGrey;
+	z-index: 10;
+	
+	#menu_buttons {
+			form {
+				display: inline;
+			}
+			#menu_en {
+    			background: url('../bundles/flyingmain/images/flag_en.png') no-repeat center;
+			}
+			#menu_pt {
+    			background: url('../bundles/flyingmain/images/flag_pt.png') no-repeat center;
+			}
+
+
+			padding-top: 4px;
+			height: 50px;
+			text-align: center;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			a {	
+				cursor: pointer;
+				display: inline-block;
+				margin: 0 5px;
+				height: 40px;
+				width: 40px;
+				border: 1px solid #FFF;
+				color: #FFF;
+				border-radius: 20px;
+				line-height: 40px;
+				text-align: center;
+				font-size: 20px;
+				-webkit-transition: all 0.3s ease;                  
+				transition: all 0.3s ease;
+				&:hover {
+					text-decoration: none;
+					-webkit-transition: all 0.3s ease;                  
+					transition: all 0.3s ease;
+					-webkit-transform: rotate(180deg);
+					transform: rotate(180deg);
+					color: #000;
+					background: #FFF;
+				}
+			}
+		}
+
+	&#top_language {
+		height: 50px;
+		top: 0px;
+	}
+	
+
+
+	&#top_menu {
+		top: -280px;
+		height: 330px;
+		transition: top 0.3s ease;
+		&.active {
+			transition: top 0.3s ease;
+			top: 0px;
+		}
+		
+
+		.info_content {
+			.col-md-4 {
+				padding: 5px;
+				margin: 0 auto;
+				float: none;
+				background: yellow;
+				border-radius: 10px;
+				margin-top: 8px;
+				max-width: 340px;
+				> span {
+					display: block;
+					span {
+						font-weight: bold;
+					}
+				}
+				h3 {
+					margin-top: 0;
+				}
+			}
+		}
+	}
+
+}
+
+
+.tab_button {
+	margin-top: 20px;
+	&.active {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	.glyphicon {
+		text-indent: 5px;
+	}
+}
+
+.airports_content, .options_content, .date_content, .add_trip_content, .remove_airports_content {
+	background-color: @lightGrey;
+	border-radius: 10px;
+	border: 1px solid @darkGrey;
+	label {
+		font-weight: 100;
+		color: #1A68C8;
+	}
+}
+
+.options_content {
+	.col-md-4, .col-md-6 {
+		.input-group {
+			margin-bottom: 20px;
+			span {
+
+			}
+			input {
+
+			}
+		}
+		
+	}
+}
+
+.row.date_content {
+	max-width:400px;
+	padding: 20px;
+	margin: 0 auto;
+	.input-group {
+		margin: 10px auto;
+	}
+
+}
+
+.row.add_trip_content {
+	padding-bottom: 10px;
+}
+
+.input-group-addon:first-child {
+	min-width: 90px;
+}
+
+.one_result:nth-child(odd) {
+	background: @lightGrey;
+	.res_return_btn:hover, .res_refresh_btn:hover, .res_email_btn:hover {
+		background: @red;
+		color: @lightGrey;
+	}
+}
+
+.one_result:nth-child(even) {
+	background: #FFFFFF;
+	.res_return_btn:hover, .res_refresh_btn:hover, .res_email_btn:hover {
+		background: @red;
+		color: #FFFFFF;
+		
+	}
+}
+
+.one_result {
+	
+    .res_return_btn, .res_refresh_btn, .res_email_btn {
+    	-webkit-transition: all 0.3s ease;                  
+	    transition: all 0.3s ease;
+	}
+	.res_return_btn:hover, .res_refresh_btn:hover, .res_email_btn:hover {
+		-webkit-transition: all 0.3s ease;                  
+   		transition: all 0.3s ease;
+   		-webkit-transform: rotate(180deg);
+		transform: rotate(180deg);
+	}
+}
+
+#search_btn, #refine_btn {
+	display: block;
+}
+
+#search_btn {
+	margin: 10px auto;
+}
+
+#refine_btn, #update_btn {
+	margin-left: 25px;
+}
+
+#update_btn {
+	margin-top: 30px !important;
+}
+
+#remove_airports_btn {
+	margin-bottom: 15px;
+	.glyphicon {
+		top: 13px;
+	}
+}
+
+.updating_flights {
+	position: relative;
+	top: 20px;
+	margin-left: 25px;
+}
+
+.search_results.row {
+	display:none;
+	background: #F9F9F9;
+	border: 1px solid @darkGrey;
+	padding: 20px 5px 20px 5px;
+	max-width: 720px;
+	margin: 0 auto;
+	border-radius: 10px;
+}
+
+.one_result {
+	height: 36px;
+	overflow: hidden;
+	border: 1px solid @darkGrey;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	span {
+		display: block;
+		font-size: 15px;
+		line-height: 25px;
+		.euros {
+			display: inline-block;
+		}
+		&.cents {
+				font-size: 70%;
+				display: inline-block;
+			}
+		&.glyphicon {
+			display: inline-block;
+			margin-right: 5px;
+			color: @darkGrey;
+		}
+		&.res_fulldate {
+			float: left;
+			font-size: 18px;
+			line-height: 30px;
+			margin-bottom: 5px;
+		}
+		&.res_total {
+			font-size: 19px;
+			.euros {
+				font-size: 19px;
+			}
+		}
+		&.larger {
+			font-weight: 700;
+		}
+		&.res_wait {
+			margin-right: 40px;
+		}
+		&.res_title {
+			position: relative;
+			cursor: pointer;
+			overflow: hidden;
+			width: 100%;
+			border-bottom: 1px solid @darkGrey;
+		}
+		&.res_return_btn, &.res_refresh_btn, &.res_email_btn {
+			margin-left: 10px;
+			color: @red;
+			border: 1px solid @darkGrey;
+			border-radius: 15px;
+			width: 30px;
+			text-align: center;
+			font-size: 20px;
+		}
+		&.res_wait, &.res_total, &.res_return_btn, &.res_refresh_btn, &.res_email_btn {
+			display: inline-block;
+			float: right;
+			line-height: 30px;
+		}
+	}
+}
+
+
+
+.tab_button  {
+ 	position: relative;
+ 	min-width: 200px;
+	outline: none;
+	text-indent: 10px;
+	text-align: left !important;
+	&.active .glyphicon {
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+
+	-webkit-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+	}
+	
+	.glyphicon {
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		-webkit-transition: all 0.4s ease;
+		transition: all 0.4s ease;
+	}
+
+	&#going_btn, &#returning_btn {
+		display:none;
+		margin-left: 25px;
+	}
+	
+	
+
+ } 
+			
+ 
+.remaining_airports_wrapper {
+	display: none;
+}
+
+.resizable_wrapper {
+	//margin-left: -15px;
+	//margin-right: -15px;
+	.row {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	
+	.tab_button {
+		margin-left: 15px;
+	}
+
+}
+
+.direct_flight_choice {
+	margin-top: 15px;
+}
+
+.height20 {
+	height: 20px;
+	width: 100%;
+}
+
+span.smaller {
+	font-size: 70%;
+	color: @darkGrey;
+	display: inline-block;
+	text-indent: 5px;
+}
+
+span.remove_airport {
+	color: red;
+}
+
+.clear {
+	clear: both;
+}
+
+.low_wait {
+	font-weight: bold;
+	color: green;
+}
+
+
+#flights_total {
+	display: none;
+}
+
+.input_email {
+	display: none;
+	z-index: 15;
+	background: black;
+	background: rgba(0,0,0,0.9);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	td {
+		vertical-align: middle;
+
+	}
+	form {
+		width: 200px;
+	}
+	input {
+		width: 100%;
+	}
+	button {
+		display: block;
+		width: 100%;
+	}
+
+}
+
+.error_bkg {
+	background: red !important;
+}
+
+.error {
+	color: red !important;
+}
+
+span.label-success {
+	font-size: 16px;
+	margin: 15px;
+	display: block;
+	clear: both;
+	position: relative;
+	top: 15px;
+}
+
+@import "partial/mediaqueries";

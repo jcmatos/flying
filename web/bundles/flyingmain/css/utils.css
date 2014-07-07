@@ -1,0 +1,26 @@
+
+
+
+
+input[type=checkbox].css-checkbox.med + label.css-label.med {
+    height:17px; 
+	display:inline-block;
+	line-height:10px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size:15px;
+	vertical-align:middle;
+    cursor:pointer;
+}
+
+input[type=checkbox].css-checkbox {
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height:20px; 
+    width:20px; 
+    margin:-1px; 
+    padding:0;
+    border:0;
+}
+
+

@@ -1,0 +1,5 @@
+
+flying_main:
+    resource: "@FlyingMainBundle/Controller"
+    type:     annotation
+    prefix:   /

@@ -1,0 +1,71 @@
+<html>
+<head>
+<style>
+body, h3, span {
+	font-family: "Trebuchet MS", Helvetica, sans-serif
+	}
+
+h3 {
+	font-size: 20px;
+	font-weight: bold;
+	color: #5B5E51;
+	text-transform: uppercase;
+}
+
+span {
+	text-transform: capitalize;
+}
+
+</style>
+</head>
+<body>
+	
+
+<h3 style="">{% trans %}Ida{% endtrans %} - {{flight_go1.date}}</h3>
+<div class="going_flight" style="background: #E3E4E0; border-radius: 10px; border: 1px solid black; overflow: hidden; max-width: 500px; padding: 20px;">
+	<div class="one_flight" style="float:left; width: 250px;">
+		<span style="display:block;">{% trans %}Data{% endtrans %}: {{flight_go1.date}}</span>
+		<span style="display:block;">{% trans %}de{% endtrans %}: {{flight_go1.origin}}</span>
+		<span style="display:block;">{% trans %}para{% endtrans %}: {{flight_go1.destination}}</span>
+		<span style="display:block;">{% trans %}Partida{% endtrans %}: {{flight_go1.departure}}</span>
+		<span style="display:block;">{% trans %}Chegada{% endtrans %}: {{flight_go1.arrival}}</span>
+		<span style="display:block; font-weight: bold;">{% trans %}Preco{% endtrans %}: {{flight_go1.price|round(2, 'floor')}} &euro;</span>
+	</div>
+	
+	{% if flight_go2 != null %}
+	<div class="one_flight" style="float:left; width: 250px;">
+		<span style="display:block;">{% trans %}Data{% endtrans %}: {{flight_go2.date}}</span>
+		<span style="display:block;">{% trans %}de{% endtrans %}: {{flight_go2.origin}}</span>
+		<span style="display:block;">{% trans %}para{% endtrans %}: {{flight_go2.destination}}</span>
+		<span style="display:block;">{% trans %}Partida{% endtrans %}: {{flight_go2.departure}}</span>
+		<span style="display:block;">{% trans %}Chegada{% endtrans %}: {{flight_go2.arrival}}</span>
+		<span style="display:block; font-weight: bold;">{% trans %}Preco{% endtrans %}: {{flight_go2.price|round(2, 'floor')}} &euro;</span>
+	</div>
+	{% endif %}
+</div>
+
+<h3 style="">{% trans %}Regresso{% endtrans %} - {{flight_return1.date}}</h3>
+<div class="returning_flight" style="background: #E3E4E0; border-radius: 10px; border: 1px solid black; overflow: hidden; max-width: 500px; padding: 20px;">
+	<div class="one_flight" style="float:left; width: 250px;">
+		<span style="display:block;">{% trans %}Data{% endtrans %}: {{flight_return1.date}}</span>
+		<span style="display:block;">{% trans %}de{% endtrans %}: {{flight_return1.origin}}</span>
+		<span style="display:block;">{% trans %}para{% endtrans %}: {{flight_return1.destination}}</span>
+		<span style="display:block;">{% trans %}Partida{% endtrans %}: {{flight_return1.departure}}</span>
+		<span style="display:block;">{% trans %}Chegada{% endtrans %}: {{flight_return1.arrival}}</span>
+		<span style="display:block; font-weight: bold;">{% trans %}Preco{% endtrans %}: {{flight_return1.price|round(2, 'floor')}} &euro;</span>
+	</div>
+	
+	{% if flight_return2 != null %}
+	<div class="one_flight" style="float:left; width: 250px;">
+		<span style="display:block;">{% trans %}Data{% endtrans %}: {{flight_return2.date}}</span>
+		<span style="display:block;">{% trans %}de{% endtrans %}: {{flight_return2.origin}}</span>
+		<span style="display:block;">{% trans %}para{% endtrans %}: {{flight_return2.destination}}</span>
+		<span style="display:block;">{% trans %}Partida{% endtrans %}: {{flight_return2.departure}}</span>
+		<span style="display:block;">{% trans %}Chegada{% endtrans %}: {{flight_return2.arrival}}</span>
+		<span style="display:block; font-weight: bold;">{% trans %}Preco{% endtrans %}: {{flight_return2.price|round(2, 'floor')}} &euro;</span>
+	</div>
+	{% endif %}
+</div>
+
+</body>
+</html>

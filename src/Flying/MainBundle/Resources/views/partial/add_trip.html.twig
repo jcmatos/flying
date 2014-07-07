@@ -1,0 +1,60 @@
+<div class="resizable_wrapper">
+
+	<button class="btn btn-primary btn-lg tab_button active" id="airports_btn" style="outline: none;">{% trans %}Adicionar viagem{% endtrans %}
+	<span class="glyphicon glyphicon-chevron-right"></span>
+	</button>
+
+	<section class="row add_trip_content">
+
+		<div class="col-md-4">
+			<h3>{% trans %}Origem{% endtrans %}</h3>
+			<select data-placeholder="{% trans %}Origem{% endtrans %}" id="sel_origin" class="chosen-select">
+				<option value=""></option>
+				{% for airport in all_airports %}
+					<option class="add_{{airport.code}}" value="{{airport.code}}">{{airport.text}}</option>
+				{% endfor %}
+			</select>
+		</div>
+		<div class="col-md-4">
+			<h3>{% trans %}Destino{% endtrans %}</h3>
+			<select data-placeholder="{% trans %}Destino{% endtrans %}" id="sel_destination" class="chosen-select">
+				<option value=""></option>
+				{% for airport in all_airports %}
+					<option class="add_{{airport.code}}" value="{{airport.code}}">{{airport.text}}</option>
+				{% endfor %}
+			</select>
+		</div>
+	
+		<div class="col-md-4">
+			<h3>{% trans %}Escalas{% endtrans %}</h3>
+			<h4 class="error" id="no_flights_msg" style="display: none;">{% trans %}Voo nao existente{% endtrans %}</h4>
+			<div class="stops_add_list">
+			</div>
+		</div>
+		
+		<button class="btn btn-danger btn-lg tab_button" id="add_trip_btn" style="outline: none; display: none;">{% trans %}Adicionar viagem{% endtrans %}
+			<span class="glyphicon glyphicon-plus"></span>
+		</button>
+		<span class="label label-success" style="display:none">{% trans %}Viagem inserida{% endtrans %}</span>
+		
+	</section>
+	
+</div>
+
+
+<script>
+	
+$(function () {
+
+	
+
+	// em adicionar uma viagem, marca todas as escalas como nao editaveis no select das origens e destinos (uma escala nao pode ser origem ou destino)
+	{% for stop in all_stops %}
+		$('.add_trip_content .add_{{stop.code}}').attr("disabled", true);
+	{% endfor %}
+
+	$(".chosen-select").chosen({search_contains: true});
+
+});
+
+</script>

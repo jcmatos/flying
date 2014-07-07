@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Flying</title>
+ 
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+
+{% stylesheets filter='less' output='css/compiled-main.css'
+    "@FlyingMainBundle/Resources/public/css/*"
+%}
+<link type="text/css" rel="stylesheet" media="all" href="/web/{{ asset_url }}" />
+{% endstylesheets %}
+
+{% stylesheets "@FlyingMainBundle/Resources/public/bootstrap/*"
+%}
+<link type="text/css" rel="stylesheet" media="all" href="/web/{{ asset_url }}" />
+{% endstylesheets %}
+
+{% block javascripts %}
+    {% javascripts
+        '@FlyingMainBundle/Resources/public/js/*' output='js/scripts'
+    %}
+        <script type="application/javascript" src="/web/{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+</head>
+ 
+<body id="index" class="home">

@@ -1,0 +1,87 @@
+{{ include("FlyingMainBundle:partial:send_email.html.twig") }}
+
+
+<div class="container">
+	
+	{{ include("FlyingMainBundle:partial:top_menu.html.twig") }}
+	
+
+	<form id="options_form" action="">
+	
+	{{ include("FlyingMainBundle:partial:options.html.twig") }}
+	
+	<button type="submit" class="btn btn-danger btn-lg tab_button" id="refine_btn" style="outline: none;">{% trans %}Procurar{% endtrans %}
+	<span class="glyphicon glyphicon-search"></span>
+	</button>
+	
+	</form>
+
+	{{ include("FlyingMainBundle:partial:results.html.twig") }}
+	
+	
+	<button class="btn btn-danger btn-lg tab_button" id="update_btn" style="outline: none;">{% trans %}Actualizar voos{% endtrans %}
+		<span class="glyphicon glyphicon-refresh"></span>
+	</button>
+	<span class="label label-warning updating_flights" style="display:none">{% trans %}A actualizar...{% endtrans %}</span>
+
+
+</div>
+
+<script>
+
+	// passa os voos todos para JS
+	{% for flight in all_flights_go1 %}
+		create_new_flight("{{flight.id}}","{{flight.origin}}","{{flight.destination}}","{{flight.flightNumber}}","{{flight.departure}}","{{flight.arrival}}","{{flight.date}}",{{flight.price}},"{{flight.lastUpdated}}","go1");
+    {% endfor %}
+
+    {% if direct_flight == false %}
+
+	    {% for flight in all_flights_go2 %}
+			create_new_flight("{{flight.id}}","{{flight.origin}}","{{flight.destination}}","{{flight.flightNumber}}","{{flight.departure}}","{{flight.arrival}}","{{flight.date}}",{{flight.price}},"{{flight.lastUpdated}}","go2");
+	    {% endfor %}
+
+	    {% for flight in all_flights_return1 %}
+			create_new_flight("{{flight.id}}","{{flight.origin}}","{{flight.destination}}","{{flight.flightNumber}}","{{flight.departure}}","{{flight.arrival}}","{{flight.date}}",{{flight.price}},"{{flight.lastUpdated}}","return1");
+	    {% endfor %}
+
+    {% endif %}
+
+    {% for flight in all_flights_return2 %}
+		create_new_flight("{{flight.id}}","{{flight.origin}}","{{flight.destination}}","{{flight.flightNumber}}","{{flight.departure}}","{{flight.arrival}}","{{flight.date}}",{{flight.price}},"{{flight.lastUpdated}}","return2");
+    {% endfor %}
+
+	// passa aeroportos todos para JS
+
+	{% for airport in all_airports %}
+		create_airport("{{airport.code}}","{{airport.text}}");
+	{% endfor %}
+
+
+    $(function() {
+    	set_defaults({{ min_wait_time }},{{ max_wait_time }},{{ max_flight_price }},{{ max_trip_price }},{{ result_limit }},{{ min_return_days }},{{ max_return_days }}, {{ max_tolerate_wait }}, "{{ sel_lang }}", "{{url_to_update}}");
+
+    	set_direct_flight({{direct_flight}});
+
+    });
+
+$( window ).load(function() {
+    	$('#refine_btn').click();
+		$("html, body").animate({ scrollTop: $('#going_btn').offset().top }, 0);
+});
+
+</script>
+
+
+
+
+<script>
+    (function($){
+        $(window).load(function(){
+            if (getCookie('requesting')=='yes') {
+				$('#update_btn').click();
+            }
+        });
+    })(jQuery);
+</script>
+
+

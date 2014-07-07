@@ -1,0 +1,3 @@
+flying_main:
+    resource: "@FlyingMainBundle/Resources/config/routing.yml"
+    prefix:   /

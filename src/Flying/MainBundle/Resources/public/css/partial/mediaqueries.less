@@ -1,0 +1,99 @@
+
+@media (min-width: 1200px) {
+	.tab_button {
+		&#going_btn, &#returning_btn {
+			margin-left: 25px;
+		}
+	}
+}
+
+@media (max-width: 991px) {
+ 	.res_flight1 {
+		border-bottom: 1px dotted @darkGrey;
+ 	}
+
+	.tab_button {
+		&#going_btn, &#returning_btn {
+			margin-left: 25px;
+		}
+	}
+}
+
+
+@media (max-width: 768px) {
+	.tab_button {
+		width: 100%;
+		margin-top: 2px;
+		&#going_btn, &#returning_btn, &#refine_btn, &#options_btn, &#airports_btn, &#search_btn, &#update_btn {
+			width: 95%;
+			margin: 2px auto 0 auto;
+			display: block;
+		}
+		&#returning_btn {
+			display: none;
+		}
+
+	}
+
+	form .tab_button {
+	}
+	input[type='text'] {
+		font-size: 15px;
+	}
+
+	.chk_lbl_wrapper {
+		margin-top: 10px;
+	}
+}
+
+
+
+
+
+@media (max-width: 670px) {
+ 	.one_result {
+ 		height: 96px;
+ 		span {
+ 			&.res_wait, &.res_total {
+ 				clear: both;
+ 				display: block;
+ 				margin-right: 0;
+ 			}
+
+
+ 			&.res_refresh_btn, &.res_return_btn, &.res_email_btn{
+ 				position: absolute;
+				height: 50px;
+				line-height: 50px;
+				width: 50px;
+ 				top: 35px;
+ 				border-radius: 25px;
+ 			}
+ 			&.res_return_btn, &.res_email_btn {
+ 				left: 0px;
+ 			}
+ 			&.res_refresh_btn {
+ 				left: 60px;
+ 			}
+
+ 		}
+ 	}
+
+ 	.resizable_wrapper .tab_button {
+ 		margin-left: 0px;
+ 	}
+
+ 	.one_result span.res_return_btn, .one_result span.res_refresh_btn, .one_result span.res_email_btn {
+		 margin-left: 0px;
+	}
+
+}
+
+
+@media (max-width: 440px) {
+
+	.row.date_content {
+		padding: 5px;
+	}
+
+}

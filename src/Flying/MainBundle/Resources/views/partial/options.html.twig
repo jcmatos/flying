@@ -1,0 +1,74 @@
+<div class="resizable_wrapper">
+
+	<button type="button" class="btn btn-primary btn-lg tab_button active" id="options_btn" style="outline: none;">{% trans %}Opcoes{% endtrans %}
+	<span class="glyphicon glyphicon-chevron-right"></span>
+	</button>
+
+	<section class="row options_content options_content_wrapper">
+		<div class="height20"></div>
+		{% if direct_flight == false %}
+			<div class="col-md-4">
+		{% else %}
+			<div class="col-md-6">
+		{% endif %}
+			<div class="input-group">
+				<span class="input-group-addon">
+					<span class="glyphicon glyphicon-euro"></span>
+					{% trans %}um voo{% endtrans %}
+					</span>
+				<input id="flight_price" type="number" class="form-control" min="0" placeholder="{% trans %}Preco maximo por voo{% endtrans %} ({{ max_flight_price }})">
+			</div>
+    		{% if direct_flight == false %}
+				<div class="input-group">
+					<span class="input-group-addon">
+						<span class="glyphicon glyphicon-euro"></span>
+						{% trans %}viagem{% endtrans %}
+					</span>
+					<input id="trip_price" type="number" class="form-control" min="0" placeholder="{% trans %}Preco maximo por viagem{% endtrans %} ({{ max_trip_price }})">
+				</div>
+			{% endif %}
+
+		</div>
+		{% if direct_flight == false %}
+			<div class="col-md-4">
+				<div class="input-group">
+					<span class="input-group-addon">
+						<span class="glyphicon glyphicon-time"></span>
+						min (h)
+					</span>
+					<input id="min_time" type="number" step="0.5" class="form-control" min="0" placeholder="{% trans %}Tempo de espera minimo{% endtrans %} ({{ min_wait_time/60 }})">
+				</div>
+				<div class="input-group">
+					<span class="input-group-addon">
+						<span class="glyphicon glyphicon-time"></span>
+						max (h)
+					</span>
+					<input id="max_time" type="number" step="0.5" class="form-control" min="0" placeholder="{% trans %}Tempo de espera maximo{% endtrans %} ({{ max_wait_time/60 }})">
+				</div>
+
+			</div>
+		{% endif %}
+		{% if direct_flight == false %}
+			<div class="col-md-4">
+		{% else %}
+			<div class="col-md-6">
+		{% endif %}
+			<div class="input-group">
+				<span class="input-group-addon">
+					<span class="glyphicon glyphicon-home"></span>
+					min (d)
+				</span>
+				<input id="min_days" type="number" step="1" class="form-control" min="1" placeholder="{% trans %}Tempo de estadia minimo{% endtrans %} ({{ min_return_days }})">
+			</div>
+			<div class="input-group">
+				<span class="input-group-addon">
+					<span class="glyphicon glyphicon-home"></span>
+					max (d)
+				</span>
+				<input id="max_days" type="number" step="1" class="form-control" min="1" placeholder="{% trans %}Tempo de estadia maximo{% endtrans %} ({{ max_return_days }})">
+			</div>
+
+		</div>
+	</section>
+	
+</div>

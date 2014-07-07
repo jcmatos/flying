@@ -1,0 +1,186 @@
+GRZ-Graz
+LNZ-Linz
+SZG-Salzburg
+CRL-Brussels (Charleroi)
+BRU-Brussels (Zaventem)
+PDV-Plovdiv
+OSI-Osijek
+PUY-Pula
+RJK-Rijeka
+ZAD-Zadar
+PFO-Paphos
+BRQ-Brno
+OSR-Ostrava
+PRG-Prague
+AAR-Aarhus
+BLL-Billund
+TLL-Tallinn
+LPP-Lappeenranta
+TMP-Tampere
+EGC-Bergerac
+BZR-Beziers
+BIQ-Biarritz
+BOD-Bordeaux
+BES-Brest
+BVE-Brive (Souillac)
+CCF-Carcassonne
+CFE-Clemont (Ferrand)
+DNR-Dinard
+DLE-Dole
+FSC-Figari
+GNB-Grenoble
+LRH-La Rochelle
+LIL-Lille
+LIG-Limoges
+LDE-Lourdes
+MRS-Marseille MP2
+MPL-Montpellier
+NTE-Nantes
+NCE-Nice T1
+FNI-Nîmes
+BVA-Paris (Beauvais)
+XCR-Paris (Vatry)
+PGF-Perpignan
+PIS-Poitiers
+RDZ-Rodez
+RNS-St Jacques Airport
+EBU-St. Etienne
+SXB-Strasbourg
+TLN-Toulon
+TUF-Tours
+SXF-Berlin (Schonefeld)
+BRE-Bremen
+CGN-Cologne (Bonn)
+DTM-Dortmund
+NRN-Düsseldorf (Weeze)
+HHN-Frankfurt (Hahn)
+LBC-Hamburg (Lübeck)
+FKB-Karlsruhe (Baden-Baden)
+LEJ-Leipzig (Halle)
+FMM-Memmingen (Munich West)
+FMO-Munster
+NUE-Nuremberg
+ATH-Athens
+CFU-Corfu
+CHQ-Crete (Chania)
+KLX-Kalamata
+EFL-Kefalonia
+KGS-Kos
+GPA-Patras (Araxos)
+RHO-Rhodes
+SKG-Thessaloniki
+VOL-Volos
+ZTH-Zakinthos
+BUD-Budapest T2B
+ORK-Cork
+DUB-Dublin T1
+KIR-Kerry
+NOC-Knock
+SNN-Shannon
+AHO-Alghero
+AOI-Ancona
+BRI-Bari 
+BLQ-Bologna
+BDS-Brindisi
+CAG-Cagliari
+CTA-Catania (Fontanarossa)
+CIY-Comiso
+CUF-Cuneo
+GOA-Genoa
+SUF-Lamezia
+MXP-Malpensa T1
+BGY-Milan (Bergamo)
+PMO-Palermo
+PMF-Parma
+PEG-Perugia
+PSR-Pescara
+PSA-Pisa
+CIA-Rome (Ciampino)
+FCO-Rome (Fiumicino)
+TPS-Trapani
+TRS-Trieste
+TRN-Turin
+TSF-Venice (Treviso)
+RIX-Riga
+KUN-Kaunas
+VNO-Vilnius
+MLA-Malta
+TGD-Podgorica
+AGA-Agadir
+ESU-Essaouira
+FEZ-Fez
+RAK-Marrakesh
+NDR-Nador
+OUD-Oujda
+RBA-Rabat
+TNG-Tangier
+EIN-Eindhoven
+GRQ-Groningen
+MST-Maastricht
+HAU-Haugesund
+RYG-Oslo (Rygge)
+TRF-Oslo (Torp)
+BZG-Bydgoszcz
+GDN-Gdańsk
+KTW-Katowice
+KRK-Krakow
+LCJ-Lodz
+LUZ-Lublin
+POZ-Poznań
+RZE-Rzeszów
+SZZ-Szczecin
+WMI-Warsaw (Modlin)
+WRO-Wroclaw
+FAO-Faro
+LIS-Lisbon T2
+OPO-Porto
+OTP-Bucharest (Otopeni)
+TGM-Targu Mures
+BTS-Bratislava
+ALC-Alicante
+LEI-Almeria
+OVD-Asturias
+BCN-Barcelona El Prat T2
+BIO-Bilbao
+FUE-Fuerteventura
+GRO-Girona (Barcelona)
+LPA-Gran Canaria
+IBZ-Ibiza
+XRY-Jerez
+ACE-Lanzarote
+MAD-Madrid T1
+MAH-Mahon
+AGP-Malaga
+MJV-Murcia
+PMI-Palma Mallorca
+REU-Reus (Barcelona)
+SDR-Santander
+SCQ-Santiago Comp.
+SVQ-Seville
+TFN-Tenerife (North)
+TFS-Tenerife (South)
+VLC-Valencia
+VLL-Valladolid
+ZAZ-Zaragoza
+GSE-Gothenburg (City)
+MMX-Malmö
+SFT-Skelleftea
+VXO-Smaland (Vaxjo)
+NYO-Stockholm Skavsta
+VST-Stockholm Vasteras
+BSL-Basel
+BHX-Birmingham T2
+BOH-Bournemouth
+BRS-Bristol
+LDY-Derry
+DSA-Doncaster
+EMA-East Midlands
+EDI-Edinburgh
+PIK-Glasgow (Prestwick)
+LBA-Leeds Bradford
+LPL-Liverpool
+LGW-London (Gatwick)
+LTN-London (Luton)
+STN-London (Stansted)
+MAN-Manchester T3
+NCL-Newcastle
